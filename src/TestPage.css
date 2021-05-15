@@ -1,0 +1,129 @@
+.btnhome {
+  background-color: teal;
+  border-radius: 6px;
+  width: 10vw;
+  height: 5vh;
+  color: white;
+  /* border: 2px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0.5rem;
+  font-size: 0.75rem;
+  text-decoration: none;
+}
+
+.NavBar {
+  background-color: rgb(49, 53, 49);
+  /* border: 2px solid red; */
+  height: 7vh;
+  color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.testbody {
+  /* border: 2px solid red; */
+  height: 86vh;
+  overflow-y: auto;
+}
+.footer {
+  /* border: 2px solid red; */
+  display: flex;
+  height: 7vh;
+  background-color: rgb(49, 53, 49);
+}
+.score {
+  height: 12vh;
+  color: black;
+  width: 10vw;
+  border: 2px solid black;
+  display: flex;
+  margin-top: 5vh;
+  align-items: center;
+  justify-content: center;
+  background-color: teal;
+  font-weight: bold;
+}
+.scorebox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* border: 2px solid black; */
+}
+.questionbody {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  /* border: 2px solid black; */
+}
+.question {
+  height: 10vh;
+  color: black;
+  width: 90vw;
+  border: 1px solid black;
+  display: flex;
+  margin-top: 5vh;
+  margin-left: 5vw;
+  align-items: center;
+  justify-content: center;
+  background-color: teal;
+  border-radius: 5px;
+}
+.optionbody {
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  height: auto;
+  overflow-y: auto;
+  /* border: 2px solid black; */
+}
+.option {
+  height: 7vh;
+  color: black;
+  width: 60vw;
+  overflow-y: auto;
+  border: 1px solid black;
+  display: flex;
+  margin-top: 1vh;
+  margin-left: 20vw;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: teal;
+  border-radius: 5px;
+  border: 2px solid black;
+}
+.radio {
+  width: 4vw;
+  height: 3vh;
+}
+.submitsec {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid black; */
+}
+.submitbtn {
+  background-color: teal; /* Green */
+  border: none;
+  color: black;
+  height: 7vh;
+  width: 10vw;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+  display: inline-block;
+  margin: 10px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+.submitbtn:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  background-color: rgba(0, 121, 121, 0.692);
+}

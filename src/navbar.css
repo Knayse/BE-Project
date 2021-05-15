@@ -1,0 +1,37 @@
+.btnhome {
+  background-color: teal;
+  border-radius: 6px;
+  width: 10vw;
+  height: 5vh;
+  color: white;
+  /* border: 2px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0.5rem;
+  font-size: 0.75rem;
+  text-decoration: none;
+}
+.btnlg {
+  background-color: rgb(202, 3, 3);
+  border-radius: 6px;
+  width: 10vw;
+  height: 5vh;
+  color: white;
+  /* border: 2px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 47vw;
+  font-size: 0.75rem;
+  text-decoration: none;
+}
+.NavBar {
+  background-color: rgb(49, 53, 49);
+  /* border: 2px solid red; */
+  height: 7vh;
+  color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
