@@ -14,6 +14,7 @@ class Login extends Component {
       password: '',
       errors: {},
       alertMessage: '',
+      isLogin: false,
     }
   }
   validateProperty = (input) => {
@@ -56,7 +57,7 @@ class Login extends Component {
       })
 
       const details = Store.getState()
-      // console.log(details)
+      console.log(details)
       this.props.history.push('/Home')
     } else {
       this.setState({
