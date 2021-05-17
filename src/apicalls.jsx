@@ -18,23 +18,22 @@ export const loginAPI = async (username, password) => {
   return data
 }
 
-export const registerAPI = () => {
-  const response = {}
-  axios
-    .post('http://localhost:9001/users', {
-      user_name: 'user1',
-      name: 'user1',
-      email: 'user1@gmail.com',
-      password: 'qwerty',
-      college: 'PICT,Pune',
-    })
-    .then(
-      (data) => {
-        response = data
-      },
-      (error) => {
-        console.log(error)
-      },
-    )
+export const registerAPI = async (name, username, password, email, college) => {
+  const response = await axios.post('http://localhost:9001/users', {
+    user_name: username,
+    name: name,
+    email: email,
+    password: password,
+    college: college,
+  })
+  // .then(
+  //   (data) => {
+  //     response = data
+  //   },
+  //   (error) => {
+  //     console.log(error)
+  //   },
+  //)
+  // console.log(response)
   return response
 }

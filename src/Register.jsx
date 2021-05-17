@@ -1,14 +1,25 @@
 import React, { Component } from 'react'
+import { registerAPI } from './apicalls'
 import Input from './Input'
 import Navbar from './navbar'
 import './Register.css'
+import Store from './Store'
+import Alert_pop from './alert_pop'
+import { withRouter } from 'react-router-dom'
 class Register extends Component {
-  state = {
-    username: '',
-    email: '',
-    password: '',
-    errors: {},
+  constructor(props) {
+    super(props)
+    this.state = {
+      username: '',
+      email: '',
+      password: '',
+      name: '',
+      college: '',
+      errors: {},
+      alertMessage: '',
+    }
   }
+
   validateProperty = (input) => {
     if (input.id === 'username') {
       if (input.value === '') return 'Username is required. '
@@ -18,6 +29,12 @@ class Register extends Component {
     }
     if (input.id === 'email') {
       if (input.value === '') return 'Email is required. '
+    }
+    if (input.id === 'name') {
+      if (input.value === '') return 'Name is required. '
+    }
+    if (input.id === 'college') {
+      if (input.value === '') return 'College is required. '
     }
   }
   handleChange = (e) => {
@@ -32,22 +49,52 @@ class Register extends Component {
     if (this.state.username.trim() == '')
       errors.username = 'Username is required'
     if (this.state.password.trim() == '')
-      errors.password = 'password is required'
-    if (this.state.email.trim() == '') errors.email = 'email is required'
+      errors.password = 'Password is required'
+    if (this.state.email.trim() == '') errors.email = 'Email is required'
+    if (this.state.name.trim() == '') errors.name = 'Name is required'
+    if (this.state.college.trim() == '') errors.college = 'College is required'
     return Object.keys(errors).length === 0 ? null : errors
   }
-  handleSubmit = (e) => {
+  handleSubmit = async (e) => {
     e.preventDefault()
     const errors = this.validate()
     this.setState({ errors: errors || {} })
     if (errors) return
+    // console.log(this.state)
+    const response = await registerAPI(
+      this.state.name,
+      this.state.username,
+      this.state.password,
+      this.state.email,
+      this.state.college,
+    )
+    // console.log(response)
+    if (response.status === 200) {
+      this.props.history.push('/')
+    } else {
+      this.setState({
+        ...this.state,
+        alertMessage: response.data,
+      })
+    }
   }
   render() {
-    console.log(this.state.errors)
+    // console.log(this.state.errors)
     return (
       <div>
         <Navbar prev="Register" />
+        {this.state.alertMessage !== '' && (
+          <Alert_pop alertMessage={this.state.alertMessage} />
+        )}
         <form className="Register_box">
+          <Input
+            name="name"
+            value={this.state.name}
+            onChange={this.handleChange}
+            label="name"
+            type="text"
+            errorMessage={this.state.errors.name}
+          />
           <Input
             name="username"
             value={this.state.username}
@@ -72,6 +119,14 @@ class Register extends Component {
             type="email"
             errorMessage={this.state.errors.email}
           />
+          <Input
+            name="college"
+            value={this.state.college}
+            onChange={this.handleChange}
+            label="college"
+            type="text"
+            errorMessage={this.state.errors.college}
+          />
           <button
             type="button"
             className="Register_submit"
@@ -85,4 +140,4 @@ class Register extends Component {
   }
 }
 
-export default Register
+export default withRouter(Register)

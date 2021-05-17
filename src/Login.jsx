@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './Login.css'
+import { withRouter } from 'react-router-dom'
 import Store from './Store'
 import Home from './Home'
 import { loginAPI, registerAPI } from './apicalls'
@@ -11,7 +12,6 @@ class Login extends Component {
     this.state = {
       userName: '',
       password: '',
-      isLogin: false,
       errors: {},
       alertMessage: '',
     }
@@ -45,7 +45,7 @@ class Login extends Component {
     this.setState({ errors })
     if (errors) return
     const response = await loginAPI(this.state.userName, this.state.password)
-    console.log(response)
+    // console.log(response)
     if (response.status === 200) {
       Store.dispatch({
         type: 'login',
@@ -54,12 +54,10 @@ class Login extends Component {
           isLogin: true,
         },
       })
+
       const details = Store.getState()
-      console.log(details)
-      this.setState({
-        ...this.state,
-        isLogin: true,
-      })
+      // console.log(details)
+      this.props.history.push('/Home')
     } else {
       this.setState({
         ...this.state,
@@ -68,75 +66,50 @@ class Login extends Component {
     }
   }
   render() {
+    // console.log(this.props)
     return (
       <div>
-        {this.state.isLogin === false && (
-          <div className="container">
-            <Navbar prev="Register" />
-            {this.state.alertMessage !== '' && (
-              <Alert_pop alertMessage={this.state.alertMessage} />
-            )}
-            <div className="main">
-              <form className="form">
-                UserName
-                <input
-                  className="inputbox"
-                  type="text"
-                  name="userName"
-                  value={this.state.userName}
-                  onChange={this.handleChange}
-                />
-                {this.state.errors && (
-                  <div className="Login_error">
-                    {this.state.errors.userName}
-                  </div>
-                )}
-                Password
-                <input
-                  className="inputbox"
-                  type="password"
-                  name="password"
-                  value={this.state.password}
-                  onChange={this.handleChange}
-                />
-                {this.state.errors && (
-                  <div className="Login_error">
-                    {this.state.errors.password}
-                  </div>
-                )}
-                <input
-                  className="submit success"
-                  type="submit"
-                  onClick={this.handleSubmit}
-                />
-              </form>
-            </div>
+        <div className="container">
+          <Navbar prev="Register" />
+          {this.state.alertMessage !== '' && (
+            <Alert_pop alertMessage={this.state.alertMessage} />
+          )}
+          <div className="main">
+            <form className="form">
+              UserName
+              <input
+                className="inputbox"
+                type="text"
+                name="userName"
+                value={this.state.userName}
+                onChange={this.handleChange}
+              />
+              {this.state.errors && (
+                <div className="Login_error">{this.state.errors.userName}</div>
+              )}
+              Password
+              <input
+                className="inputbox"
+                type="password"
+                name="password"
+                value={this.state.password}
+                onChange={this.handleChange}
+              />
+              {this.state.errors && (
+                <div className="Login_error">{this.state.errors.password}</div>
+              )}
+              <input
+                className="submit success"
+                type="submit"
+                onClick={this.handleSubmit}
+              />
+            </form>
           </div>
-        )}
-        {this.state.isLogin === true && <Home prev="Home" />}
+        </div>
+        )
       </div>
     )
   }
 }
 
-export default Login
-
-const obj = [
-  {
-    id: '1',
-    description: 'How can we describe an array in the best possible way?',
-    option: [
-      'The Array shows a hierarchical structure.',
-      'Arrays are immutable.',
-      'Container that stores the elements of similar types',
-      'The Array is not a data structure',
-    ],
-    answer: 'Container that stores the elements of similar types',
-    tags: ['array', 'easy'],
-    total_submission: 10,
-    correct_submission: 5,
-    //0 = easy , 1 = medium , 2 = hard
-    difficulty: 0,
-    link: 'Link here',
-  },
-]
+export default withRouter(Login)
