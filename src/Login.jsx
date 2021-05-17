@@ -4,10 +4,17 @@ import Store from './Store'
 import Home from './Home'
 import { loginAPI, registerAPI } from './apicalls'
 import Navbar from './navbar'
+import Alert_pop from './alert_pop'
 class Login extends Component {
   constructor(props) {
     super(props)
-    this.state = { userName: '', password: '', isLogin: false, errors: {} }
+    this.state = {
+      userName: '',
+      password: '',
+      isLogin: false,
+      errors: {},
+      alertMessage: '',
+    }
   }
   validateProperty = (input) => {
     if (input.name === 'userName') {
@@ -32,27 +39,31 @@ class Login extends Component {
       errors.password = 'password is Required.'
     return Object.keys(errors).length === 0 ? null : errors
   }
-  handleSubmit = (e) => {
+  handleSubmit = async (e) => {
     e.preventDefault()
     const errors = this.validate()
     this.setState({ errors })
     if (errors) return
-    const response = loginAPI(this.state.userName, this.state.password)
-    // const response = registerAPI()
-    const details = Store.getState()
-    if (
-      this.state.userName === details[0].userData.userName &&
-      this.state.password === details[0].userData.password
-    ) {
+    const response = await loginAPI(this.state.userName, this.state.password)
+    console.log(response)
+    if (response.status === 200) {
       Store.dispatch({
         type: 'login',
         payload: {
+          data: response.data,
           isLogin: true,
         },
       })
+      const details = Store.getState()
+      console.log(details)
       this.setState({
         ...this.state,
         isLogin: true,
+      })
+    } else {
+      this.setState({
+        ...this.state,
+        alertMessage: response.data,
       })
     }
   }
@@ -62,6 +73,9 @@ class Login extends Component {
         {this.state.isLogin === false && (
           <div className="container">
             <Navbar prev="Register" />
+            {this.state.alertMessage !== '' && (
+              <Alert_pop alertMessage={this.state.alertMessage} />
+            )}
             <div className="main">
               <form className="form">
                 UserName
@@ -106,3 +120,23 @@ class Login extends Component {
 }
 
 export default Login
+
+const obj = [
+  {
+    id: '1',
+    description: 'How can we describe an array in the best possible way?',
+    option: [
+      'The Array shows a hierarchical structure.',
+      'Arrays are immutable.',
+      'Container that stores the elements of similar types',
+      'The Array is not a data structure',
+    ],
+    answer: 'Container that stores the elements of similar types',
+    tags: ['array', 'easy'],
+    total_submission: 10,
+    correct_submission: 5,
+    //0 = easy , 1 = medium , 2 = hard
+    difficulty: 0,
+    link: 'Link here',
+  },
+]

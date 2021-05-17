@@ -11,11 +11,14 @@ const testData = {
 export default function reducer(state = [], action) {
   switch (action.type) {
     case 'create-state':
-      return [...state, { userData: testData, isLogin: false }]
+      return [...state, { userData: {}, isLogin: false }]
     case 'login':
-      return [...state, { userData: testData, isLogin: action.payload.isLogin }]
+      return [
+        ...state,
+        { userData: action.payload.data, isLogin: action.payload.isLogin },
+      ]
     case 'logout':
-      return [...state, { userData: testData, isLogin: action.payload.isLogin }]
+      return [...state, { userData: {}, isLogin: action.payload.isLogin }]
     case 'addQuestion':
       return [
         ...state,
