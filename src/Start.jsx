@@ -3,12 +3,12 @@ import { Route, Router, Switch } from 'react-router-dom'
 import './Start.css'
 import App from './App'
 import Home from './Home'
-import TreeandGraph from './TreeandGraph'
 import Login from './Login'
 import TestPage from './TestPage'
 import Store from './Store'
 import Dashboard from './Dashboard'
 import Register from './Register'
+import TreeandGraph from './TreeandGraph'
 
 class Start extends Component {
   render() {
