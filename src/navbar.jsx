@@ -6,6 +6,7 @@ import Store from './Store'
 class Navbar extends Component {
   state = {
     prev: this.props.prev,
+    store: Store.getState(),
   }
   handleLogout = (e) => {
     console.log('logout')
@@ -18,6 +19,7 @@ class Navbar extends Component {
     console.log(Store.getState())
   }
   render() {
+    console.log(this.state.store)
     return (
       <div className="NavBar">
         {this.state.prev !== 'Home' && this.state.prev !== 'Register' && (
@@ -42,14 +44,14 @@ class Navbar extends Component {
             Test
           </Link>
         )}
-        {this.state.prev !== 'Register' && (
-          <Link to="/" onClick={this.handleLogout} className="btnlg">
-            Logout
-          </Link>
-        )}
         {this.state.prev === 'Register' && (
           <Link to="/Register" className="btnhome">
             Register
+          </Link>
+        )}
+        {this.state.store[this.state.store.length - 1].isLogin === true && (
+          <Link to="/" onClick={this.handleLogout} className="btnlg">
+            Logout
           </Link>
         )}
 
