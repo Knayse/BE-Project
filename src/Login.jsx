@@ -6,6 +6,7 @@ import Home from './Home'
 import { loginAPI, registerAPI } from './apicalls'
 import Navbar from './navbar'
 import Alert_pop from './alert_pop'
+import Footer from './Footer'
 class Login extends Component {
   constructor(props) {
     super(props)
@@ -45,7 +46,7 @@ class Login extends Component {
     this.setState({ errors })
     if (errors) return
     const response = await loginAPI(this.state.userName, this.state.password)
-    // console.log(response)
+    console.log(response)
     if (response.status === 200) {
       Store.dispatch({
         type: 'login',
@@ -67,6 +68,17 @@ class Login extends Component {
   }
   render() {
     // console.log(this.props)
+    // const tags = []
+    // for (let i = 0; i < testData.length; i++) {
+    //   const curtag = testData[i].tags
+    //   for (let j = 0; j < curtag.length; j++) {
+    //     console.log(curtag[j])
+    //     if (!tags.includes(curtag[j])) {
+    //       tags.push(curtag[j])
+    //     }
+    //   }
+    // }
+    // console.log(tags)
     return (
       <div>
         <div className="container">
@@ -106,6 +118,7 @@ class Login extends Component {
             </form>
           </div>
         </div>
+        <Footer />
       </div>
     )
   }

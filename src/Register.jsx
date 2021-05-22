@@ -6,6 +6,7 @@ import './Register.css'
 import Store from './Store'
 import Alert_pop from './alert_pop'
 import { withRouter } from 'react-router-dom'
+import Footer from './Footer'
 class Register extends Component {
   constructor(props) {
     super(props)
@@ -135,6 +136,7 @@ class Register extends Component {
             Submit
           </button>
         </form>
+        <Footer />
       </div>
     )
   }

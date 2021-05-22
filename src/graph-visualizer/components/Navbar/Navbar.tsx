@@ -19,7 +19,7 @@ const Navbar: React.FC<NavbarProps> = (props: NavbarProps): ReactElement => {
   return (
     <Container>
       <Row justifyContent="center">
-        <GraphAVLogo></GraphAVLogo>
+        {/* <GraphAVLogo></GraphAVLogo> */}
       </Row>
 
       <Row justifyContent="space-evenly" margin="0 18px">

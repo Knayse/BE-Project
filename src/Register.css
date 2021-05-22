@@ -1,9 +1,11 @@
 .Register_box {
   border: 2px solid black;
+  border-radius: 4px;
   width: 40vw;
   height: 80vh;
   margin-left: 30vw;
-  margin-top: 5vh;
+  margin-top: 2.5vh;
+  margin-bottom: 3vh;
 }
 .Register_submit {
   margin-left: 16vw;

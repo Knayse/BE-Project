@@ -9,6 +9,7 @@
 .Input_input {
   height: 4vh;
   width: 20vw;
+  border-radius: 5px;
 }
 .Input_label {
   margin-left: 9.7vw;
