@@ -28,6 +28,20 @@
   justify-content: center;
   /* border: 1px solid black; */
 }
+.Dashboard_topic_profiency {
+  border-top: 2px solid black;
+  /* border: 2px solid red; */
+  height: 55vh;
+  overflow-y: auto;
+}
+.Dashboard_topic_list {
+  color: rgb(0, 176, 189);
+  margin-top: 1vh;
+}
+.Dashboard_topic_profiency_heading {
+  display: flex;
+  justify-content: center;
+}
 .Dashboard_right_block_heading {
   font-weight: bolder;
   display: flex;
@@ -35,4 +49,19 @@
   font-size: large;
   color: rgb(54, 54, 150);
   margin-top: 2vh;
+}
+.Dashboard_analysis {
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  /* border: 2px solid red; */
+}
+.Dashboard_analysis_btn {
+  height: 7vh;
+  width: 14vw;
+  background-color: teal;
+  margin-left: 3.8vw;
+  margin-top: 2vh;
+  color: white;
+  font-weight: bold;
 }

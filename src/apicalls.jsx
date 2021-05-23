@@ -26,15 +26,6 @@ export const registerAPI = async (name, username, password, email, college) => {
     password: password,
     college: college,
   })
-  // .then(
-  //   (data) => {
-  //     response = data
-  //   },
-  //   (error) => {
-  //     console.log(error)
-  //   },
-  //)
-  // console.log(response)
   return response
 }
 
@@ -43,15 +34,6 @@ export const getFirstQuestion = async (email, topic) => {
     topic: topic,
     email: email,
   })
-  // .then(
-  //   (data) => {
-  //     response = data
-  //   },
-  //   (error) => {
-  //     console.log(error)
-  //   },
-  //)
-  // console.log(response)
   return response
 }
 
@@ -61,14 +43,15 @@ export const getNextQuestion = async (email, id, correct) => {
     email: email,
     correct: correct,
   })
-  // .then(
-  //   (data) => {
-  //     response = data
-  //   },
-  //   (error) => {
-  //     console.log(error)
-  //   },
-  //)
-  // console.log(response)
+  return response
+}
+
+export const getEndTest = async (email, id, score, correct) => {
+  const response = await axios.post('http://localhost:9001/submitTest', {
+    id: id,
+    email: email,
+    score: score,
+    correct: correct,
+  })
   return response
 }

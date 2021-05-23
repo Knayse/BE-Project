@@ -19,7 +19,7 @@ class Navbar extends Component {
     console.log(Store.getState())
   }
   render() {
-    console.log(this.state.store)
+    // console.log(this.state.store)
     return (
       <div className="NavBar">
         {this.state.prev !== 'Home' && this.state.prev !== 'Register' && (

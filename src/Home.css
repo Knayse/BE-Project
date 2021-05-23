@@ -62,10 +62,18 @@
 }
 .description {
   /* border: 2px solid red; */
-  height: 51vh;
+  height: 41vh;
   width: 95%;
   margin-left: 1vw;
   background-color: wheat;
+  overflow-y: auto;
+}
+.topiclink {
+  height: 11vh;
+  width: 95%;
+  margin-left: 1vw;
+  background-color: wheat;
+  overflow-y: auto;
 }
 .footer {
   /* border: 2px solid red; */
