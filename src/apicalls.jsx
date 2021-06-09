@@ -55,3 +55,8 @@ export const getEndTest = async (email, id, score, correct) => {
   })
   return response
 }
+
+export const getTheory = async () => {
+  const response = await axios.get('http://localhost:9001/getTheory')
+  return response
+}

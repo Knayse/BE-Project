@@ -39,11 +39,11 @@ class Navbar extends Component {
         <Link to="/Tree-And-graph-Visualizer" className="btnhome">
           Graph and Tree
         </Link>
-        {this.state.prev !== 'Test' && this.state.prev !== 'Register' && (
+        {/* {this.state.prev !== 'Test' && this.state.prev !== 'Register' && (
           <Link to="/Test" className="btnhome">
             Test
           </Link>
-        )}
+        )} */}
         {this.state.prev === 'Register' && (
           <Link to="/Register" className="btnhome">
             Register

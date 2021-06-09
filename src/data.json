@@ -1,0 +1,117 @@
+[
+	{
+		"topic" : "Array",
+		"description" : "An array is a sequential collection of elements of same data type and stores data elements in a continuous memory location.",
+		"link" : ["https://www.hackerearth.com/practice/data-structures/arrays/1-d/tutorial/" ]
+	},
+    {
+		"topic" : "Avl tree",
+		"description" : "AVL Tree is invented by GM Adelson - Velsky and EM Landis in 1962. The tree is named AVL in honour of its inventors. AVL Tree can be defined as height balanced binary search tree in which each node is associated with a balance factor which is calculated by subtracting the height of its right sub-tree from that of its left sub-tree.",
+		"link" : ["https://www.geeksforgeeks.org/avl-tree-set-1-insertion/"]
+	},
+    {
+		"topic" : "Bellman–Ford",
+		"description" : "Bellman Ford algorithm helps us find the shortest path from a vertex to all other vertices of a weighted graph. It is similar to Dijkstra's algorithm but it can work with graphs in which edges can have negative weights.",
+		"link" : ["https://www.geeksforgeeks.org/bellman-ford-algorithm-dp-23/"]
+	},
+    {
+		"topic" : "BFS",
+		"description" : "There are many ways to traverse graphs. BFS is the most commonly used approach. BFS is a traversing algorithm where you should start traversing from a selected node (source or starting node) and traverse the graph layerwise thus exploring the neighbour nodes. You must then move towards the next-level neighbour nodes.",
+		"link" : ["https://www.geeksforgeeks.org/breadth-first-search-or-bfs-for-a-graph/"]
+	},
+    {
+		"topic" : "Binary Search",
+		"description" : "Binary search is a fast search algorithm with run-time complexity of Ο(log n). This search algorithm works on the principle of divide and conquer. For this algorithm to work properly, the data collection should be in the sorted form.",
+		"link" : ["https://www.geeksforgeeks.org/binary-search/"]
+	},
+    {
+		"topic" : "Binary Search Tree",
+		"description" : "Binary Search tree can be defined as a class of binary trees, in which the nodes are arranged in a specific order. In bst,the value of all the nodes in the left sub-tree is less than the value of the root and all the nodes in the right sub-tree is greater than or equal to the value of the root. This rule will be recursively applied to all the left and right sub-trees of the root.",
+		"link" : ["https://www.geeksforgeeks.org/binary-search-tree-set-1-search-and-insertion/"]
+	},
+    {
+		"topic" : "Circular Linked List",
+		"description" : "Circular Linked List is a variation of Linked list in which the first element points to the last element and the last element points to the first element. There is no NULL at the end. Both Singly Linked List and Doubly Linked List can be made into a circular linked list.",
+		"link" : ["https://www.geeksforgeeks.org/circular-linked-list/"]
+	},
+    {
+		"topic" : "Circular Queue",
+		"description" : "A circular queue is similar to a linear queue as it is also based on the FIFO (First In First Out) principle except that the last position is connected to the first position in a circular queue that forms a circle. It is also known as a Ring Buffer.",
+		"link" : ["https://www.geeksforgeeks.org/circular-queue-set-1-introduction-array-implementation/#:~:text=Circular%20Queue%20is%20a%20linear,elements%20until%20queue%20becomes%20full."]
+	},
+    {
+		"topic" : "Dequeue ",
+		"description" : "The dequeue stands for Double Ended Queue. Deque is a linear data structure in which the insertion and deletion operations are performed from both ends. We can say that deque is a generalized version of the queue. Deque can be used both as stack and queue as it allows the insertion and deletion operations on both ends.",
+		"link" : ["https://www.geeksforgeeks.org/deque-set-1-introduction-applications/"]
+	},
+    {
+		"topic" : "Depth First Search",
+		"description" : "The DFS algorithm is a recursive algorithm that uses the idea of backtracking. It involves exhaustive searches of all the nodes by going ahead, if possible, else by backtracking. This recursive nature of DFS can be implemented using stacks.",
+		"link" : ["https://www.geeksforgeeks.org/depth-first-search-or-dfs-for-a-graph/"]
+	},
+    {
+		"topic" : "Graph",
+		"description" : "A graph is a pictorial representation of a set of objects where some pairs of objects are connected by links. The interconnected objects are represented by points termed as vertices, and the links that connect the vertices are called edges.",
+		"link" : ["https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/"]
+	},
+    {
+		"topic" : "Hash Table",
+		"description" : "Hash Table is a data structure which stores data in an associative manner. In a hash table, data is stored in an array format, where each data value has its own unique index value. Access of data becomes very fast if we know the index of the desired data.",
+		"link" : ["https://www.geeksforgeeks.org/hashing-data-structure/"]
+	},
+    {
+		"topic" : "Heap Sort",
+		"description" : "Heap Sort is a popular and efficient sorting algorithm in computer programming. Learning how to write the heap sort algorithm requires knowledge of two types of data structures - arrays and trees. Heap sort works by visualizing the elements of the array as a special kind of complete binary tree called a heap.",
+		"link" : ["https://www.geeksforgeeks.org/heap-sort/"]
+	},
+    {
+		"topic" : "Insertion Sort",
+		"description" : "Insertion sort is the sorting mechanism where the sorted array is built having one item at a time. The array elements are compared with each other sequentially and then arranged simultaneously in some particular order. The analogy can be understood from the style we arrange a deck of cards. This sort works on the principle of inserting an element at a particular position, hence the name Insertion Sort.",
+		"link" : ["https://www.geeksforgeeks.org/insertion-sort/"]
+	},
+    {
+		"topic" : "Kruskal’s Algorithm",
+		"description" : "Kruskal's algorithm to find the minimum cost spanning tree uses the greedy approach. This algorithm treats the graph as a forest and every node it has as an individual tree. A tree connects to another only and only if, it has the least cost among all available options and does not violate MST properties.",
+		"link" : ["https://www.geeksforgeeks.org/kruskals-minimum-spanning-tree-algorithm-greedy-algo-2/"]
+	},
+    {
+		"topic" : "Linked List",
+		"description" : "A linked list is a sequence of data structures, which are connected together via links. Linked List is a sequence of links which contains items. Each link contains a connection to another link. Linked list is the second most-used data structure after array. Following are the important terms to understand the concept of Linked List.",
+		"link" : ["https://www.geeksforgeeks.org/data-structures/linked-list/"]
+	},
+    {
+		"topic" : "Merge Sort",
+		"description" : "Merge sort is a sorting technique based on divide and conquer technique. With worst-case time complexity being Ο(n log n), it is one of the most respected algorithms. Merge sort first divides the array into equal halves and then combines them in a sorted manner.",
+		"link" : ["https://www.geeksforgeeks.org/merge-sort/"]
+	},
+    {
+		"topic" : "Prim’s Algorithm",
+		"description" : "Prim's algorithm to find minimum cost spanning tree (as Kruskal's algorithm) uses the greedy approach. Prim's algorithm shares a similarity with the shortest path first algorithms. Prim's algorithm, in contrast with Kruskal's algorithm, treats the nodes as a single tree and keeps on adding new nodes to the spanning tree from the given graph.",
+		"link" : ["https://www.geeksforgeeks.org/prims-minimum-spanning-tree-mst-greedy-algo-5/"]
+	},
+    {
+		"topic" : "Priority Queue",
+		"description" : "Priority queues are a type of container adaptors, specifically designed such that its first element is always the greatest of the elements it contains, according to some strict weak ordering criterion. This context is similar to a heap, where elements can be inserted at any moment, and only the max heap element can be retrieved ",
+		"link" : ["https://www.geeksforgeeks.org/priority-queue-in-cpp-stl/"]
+	},
+    {
+		"topic" : "Red-Black Tree",
+		"description" : "A Red Black Tree is a category of the self-balancing binary search tree. A red-black tree is a Binary tree where a particular node has color as an extra attribute, either red or black. By check the node colors on any simple path from the root to a leaf, red-black trees secure that no such path is higher than twice as long as any other so that the tree is generally balanced.",
+		"link" : ["https://www.geeksforgeeks.org/red-black-tree-set-1-introduction-2/"]
+	},
+    {
+		"topic" : "Topological Sorting",
+		"description" : "The topological sorting for a directed acyclic graph is the linear ordering of vertices. For every edge U-V of a directed graph, the vertex u will come before vertex v in the ordering. As we know that the source vertex will come after the destination vertex, so we need to use a stack to store previous elements. After completing all nodes, we can simply display them from the stack.",
+		"link" : ["https://www.geeksforgeeks.org/topological-sorting/"]
+	},
+    {
+		"topic" : "Stack",
+		"description" : "A Stack is a linear data structure that follows the LIFO (Last-In-First-Out) principle. It contains only one pointer top pointer pointing to the topmost element of the stack. Whenever an element is added in the stack, it is added on the top of the stack, and the element can be deleted only from the stack. In other words, a stack can be defined as a container in which insertion and deletion can be done from the one end known as the top of the stack.",
+		"link" : ["https://www.geeksforgeeks.org/stack-data-structure/"]
+	},
+    {
+		"topic" : "Binary Tree",
+		"description" : "Binary Tree is a special datastructure used for data storage purposes. A binary tree has a special condition that each node can have a maximum of two children. A binary tree has the benefits of both an ordered array and a linked list as search is as quick as in a sorted array and insertion or deletion operation are as fast as in linked list.",
+		"link" : ["https://www.geeksforgeeks.org/binary-tree-data-structure/"]
+	}
+]

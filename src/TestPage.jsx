@@ -27,7 +27,8 @@ class TestPage extends Component {
   componentDidMount = async () => {
     const email = Store.getState()[Store.getState().length - 1].userData.email
     // console.log(email)
-    const question = await getFirstQuestion(email, 'array')
+    console.log(this.props.tag)
+    const question = await getFirstQuestion(email, this.props.tag)
     console.log(question)
     this.setState({
       ...this.state,
@@ -141,9 +142,9 @@ class TestPage extends Component {
             <div className="resulttest">
               {'Your Score in this Test is ' + this.state.scoreValue}
             </div>
-            <Button className="returnhome" onClick={this.handleReturnHone}>
+            {/* <Button className="returnhome" onClick={this.handleReturnHone}>
               Return Home
-            </Button>
+            </Button> */}
           </div>
         )}
         {this.state.showResult === false && (

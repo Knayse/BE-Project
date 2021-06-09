@@ -49,8 +49,8 @@ class Dashboard extends Component {
     const topicProficiency = []
     for (let i = 0; i < topics.length; i++) {
       const div = correctSolved[i] / totalQuestions[i]
-      console.log(correctSolved[i], totalQuestions[i], div)
-      if (div === 0 || totalQuestions[i] === 0) {
+      console.log(correctSolved[i], totalQuestions[i], div, div <= 0.4)
+      if (totalQuestions[i] === 0) {
         topicProficiency.push('You can try learning this Topic!')
       } else if (div <= 0.4) {
         topicProficiency.push('Low (Please focus on this topic more) ')

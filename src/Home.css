@@ -54,7 +54,7 @@
   color: white;
   height: 10vh;
   width: 95%;
-  margin-top: 2vh;
+  margin-top: vh;
   margin-left: 1vw;
   display: flex;
   justify-content: center;
@@ -74,6 +74,12 @@
   margin-left: 1vw;
   background-color: wheat;
   overflow-y: auto;
+}
+.testbtn {
+  height: 7vh;
+  width: 95%;
+  margin-left: 1vw;
+  background-color: wheat;
 }
 .footer {
   /* border: 2px solid red; */

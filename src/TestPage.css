@@ -147,7 +147,8 @@
   transition-duration: 0.4s;
 }
 .resulttest {
-  margin-left: 40vh;
+  margin-left: 48vh;
+  margin-top: 5vh;
   color: rgb(0, 189, 0);
 }
 .returnhome:hover {
